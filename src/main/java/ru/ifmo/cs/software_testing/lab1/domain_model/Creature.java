@@ -1,4 +1,4 @@
-package ru.ifmo.cs.software_testing.lab1.domain_model.nextTry;
+package ru.ifmo.cs.software_testing.lab1.domain_model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -17,24 +17,26 @@ public class Creature {
 	@Getter
 	private Map<String, AwarenessType> factAwarenesses = new HashMap<>();
 
-	public Creature(boolean isAlive) {
+	public Creature(boolean isAlive, Position position) {
 		this.isAlive = isAlive;
+		this.position = position;
 	}
 
-	public void startRealizing(String fact) throws UnexpectedException {
-		factAwarenesses.putIfAbsent(fact, AwarenessType.TRYING_TO_AWARE);
-		if (factAwarenesses.get(fact) != AwarenessType.NOT_AWARE) {
+	public void beginToUnderstand(String fact) throws UnexpectedException {
+		if (factAwarenesses.get(fact) == null) {
+			factAwarenesses.put(fact, AwarenessType.TRYING_TO_AWARE);
+		} else if (factAwarenesses.get(fact) == AwarenessType.NOT_AWARE) {
 			factAwarenesses.put(fact, AwarenessType.TRYING_TO_AWARE);
 		} else {
-			throw new UnexpectedException("Already tried to realize!");
+			throw new UnexpectedException("Already tried to aware!");
 		}
 	}
 
-	public void realize(String fact) throws UnexpectedException {
+	public void beAwareOf(String fact) throws UnexpectedException {
 		if (factAwarenesses.get(fact) == null) {
 			factAwarenesses.put(fact, AwarenessType.AWARE);
 		} else if (factAwarenesses.get(fact) == AwarenessType.AWARE) {
-			throw new UnexpectedException("Already realized!");
+			throw new UnexpectedException("Already awared!");
 		} else {
 			factAwarenesses.put(fact, AwarenessType.AWARE);
 		}

@@ -1,12 +1,13 @@
-package ru.ifmo.cs.software_testing.lab1.domain_model.nextTry;
+package ru.ifmo.cs.software_testing.lab1.domain_model;
 
 import java.rmi.UnexpectedException;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class DomainModel {
-	private final static int TIME_TO_LIVE = 5000;
-	private final static int TIME_TO_REALIZE = 10000;
+	public static int TIME_TO_LIVE = 5000;
+	public static int TIME_TO_REALIZE = 10000;
+	public static int TOTAL_TIME = 12000;
 	private final static String FACT = "I am whale";
 	private static Whale whale;
 
@@ -29,10 +30,10 @@ public class DomainModel {
 				public void run() {
 					try {
 						if (whale.isAlive()) {
-							whale.realize(FACT);
+							whale.beAwareOf(FACT);
 							System.out.println(FACT);
 						}
-						System.out.println("Couldn't realize such fact: " + FACT);
+						System.out.println("Couldn't beAwareOf such fact: " + FACT);
 					} catch (UnexpectedException e) {
 						e.printStackTrace();
 					}
@@ -44,17 +45,18 @@ public class DomainModel {
 			timer.schedule(killWhale, TIME_TO_LIVE);
 
 			System.out.println("Whale starts realizing itself as a whale");
-			whale.startRealizing(FACT);
+			whale.beginToUnderstand(FACT);
 			timer.schedule(realizeItselfAWhale, TIME_TO_REALIZE);
 		} catch (UnexpectedException e) {
 			e.printStackTrace();
 		}
+
 		try {
-			Thread.sleep(12000);
+			Thread.sleep(TOTAL_TIME);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 
-		System.out.println(whale.getFactAwarenesses().toString());
+		System.out.println("whale awarenesses=" + whale.getFactAwarenesses().toString());
 	}
 }
