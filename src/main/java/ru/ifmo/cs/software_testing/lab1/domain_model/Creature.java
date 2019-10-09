@@ -36,7 +36,7 @@ public class Creature {
 		if (factAwarenesses.get(fact) == null) {
 			factAwarenesses.put(fact, AwarenessType.AWARE);
 		} else if (factAwarenesses.get(fact) == AwarenessType.AWARE) {
-			throw new UnexpectedException("Already awared!");
+			throw new UnexpectedException("Already aware!");
 		} else {
 			factAwarenesses.put(fact, AwarenessType.AWARE);
 		}

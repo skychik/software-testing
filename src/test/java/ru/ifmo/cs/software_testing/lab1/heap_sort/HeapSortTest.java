@@ -10,14 +10,13 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class HeapSortTest {
-	HeapSort heapSort = new HeapSort();
 
 	@Test
 	void sort() {
 		List<Double> arr = Arrays.asList(8.0, 1.0, 5.0, 7.38, 2.56, 4.3, -1232.0, 0.0, -213.132123, 213123123.0);
 		List<Double> sortedArr = new ArrayList<>(arr);
 		Collections.sort(sortedArr);
-		heapSort.sort(arr);
+		HeapSort.sort(arr);
 		assertEquals(arr, sortedArr);
 	}
 
