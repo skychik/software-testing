@@ -32,7 +32,6 @@ public class Tangent {
 
     public static double tan(double x) {
         double xInArea = (Math.abs(x) + Math.PI / 2) % Math.PI - (Math.PI / 2);
-        System.out.println(xInArea);
         return Math.sqrt(1 / Math.pow(taylorCos(xInArea), 2) - 1) * (x < 0 ? -1 : 1) * (xInArea < 0 ? -1 : 1);
     }
 
