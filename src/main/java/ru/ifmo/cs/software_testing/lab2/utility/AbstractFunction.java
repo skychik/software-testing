@@ -1,4 +1,4 @@
-package lab2;
+package ru.ifmo.cs.software_testing.lab2.utility;
 
 import java.util.HashMap;
 import java.util.Map;

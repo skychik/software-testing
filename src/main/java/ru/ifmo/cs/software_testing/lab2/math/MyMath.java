@@ -1,6 +1,6 @@
-package lab2.math;
+package ru.ifmo.cs.software_testing.lab2.math;
 
-public class Operation {
+public class MyMath {
 
     public static long factorial(long n) {
         if (n <= 1) return 1;

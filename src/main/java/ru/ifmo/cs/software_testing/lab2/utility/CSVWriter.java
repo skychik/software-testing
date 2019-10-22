@@ -1,9 +1,7 @@
-package lab2;
+package ru.ifmo.cs.software_testing.lab2.utility;
 
 import java.io.FileWriter;
 import java.io.IOException;
-
-import lab2.AbstractFunction;
 
 public class CSVWriter {
     private AbstractFunction function;
@@ -12,16 +10,16 @@ public class CSVWriter {
         this.function = function;
     }
 
-    public String getFilename() {
+    private String getFilename() {
         String funcName = this.function.getClass().getSimpleName();
         if (funcName.isEmpty()) {
             funcName = "func";
         }
-        return funcName + ".csv";
+        return "./output/lab2/" + funcName + ".csv";
     }
 
     public void write(double from, double to, double step) {
-        try (FileWriter writer = new FileWriter(getFilename(), false )) {
+        try ( FileWriter writer = new FileWriter(getFilename(), false) ) {
             for (double x = from; x < to; x += step) {
                 double value = function.calc(x);
 

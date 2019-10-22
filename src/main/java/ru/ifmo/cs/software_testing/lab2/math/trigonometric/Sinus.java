@@ -1,12 +1,11 @@
-package lab2.trigonometric;
+package ru.ifmo.cs.software_testing.lab2.math.trigonometric;
 
-import lab2.AbstractFunction;
+import ru.ifmo.cs.software_testing.lab2.utility.AbstractFunction;
 
-import static lab2.math.Operation.factorial;
-import static lab2.math.Operation.mod;
+import static ru.ifmo.cs.software_testing.lab2.math.MyMath.factorial;
+import static ru.ifmo.cs.software_testing.lab2.math.MyMath.mod;
 
 public class Sinus extends AbstractFunction {
-
     {
         table.put(0.0, 0.0);
         table.put(Math.PI / 6, 0.5);
@@ -20,7 +19,7 @@ public class Sinus extends AbstractFunction {
     }
 
     public Double calc (double x) {
-        Double xInArea = mod(x, 2 * Math.PI);
+        double xInArea = mod(x, 2 * Math.PI);
 
         Double tableValue = super.calc(xInArea);
         if (tableValue != null) {

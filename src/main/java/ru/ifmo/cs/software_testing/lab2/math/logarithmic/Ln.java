@@ -1,12 +1,11 @@
-package lab2.logarithmic;
+package ru.ifmo.cs.software_testing.lab2.math.logarithmic;
 
-import lab2.AbstractFunction;
+import ru.ifmo.cs.software_testing.lab2.utility.AbstractFunction;
 
 import static java.lang.Double.NEGATIVE_INFINITY;
 import static java.lang.Double.NaN;
 
 public class Ln extends AbstractFunction {
-
     {
         table.put(0.0, NEGATIVE_INFINITY);
         table.put(1.0, 0.0);

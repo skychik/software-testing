@@ -1,11 +1,10 @@
-package lab2.trigonometric;
+package ru.ifmo.cs.software_testing.lab2.math.trigonometric;
 
-import lab2.AbstractFunction;
+import ru.ifmo.cs.software_testing.lab2.utility.AbstractFunction;
 
 import static java.lang.Double.NaN;
 
 public class Tangent extends AbstractFunction {
-
     {
         table.put(-Math.PI / 2, NaN);
         table.put(-Math.PI / 4, -1.0);

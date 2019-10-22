@@ -1,9 +1,9 @@
-package lab2;
+package ru.ifmo.cs.software_testing.lab2.utility;
 
-import lab2.logarithmic.LogN;
-import lab2.trigonometric.Cosecant;
-import lab2.trigonometric.Sinus;
-import lab2.trigonometric.Tangent;
+import ru.ifmo.cs.software_testing.lab2.math.logarithmic.LogN;
+import ru.ifmo.cs.software_testing.lab2.math.trigonometric.Cosecant;
+import ru.ifmo.cs.software_testing.lab2.math.trigonometric.Sinus;
+import ru.ifmo.cs.software_testing.lab2.math.trigonometric.Tangent;
 
 public class FunctionSystem extends AbstractFunction{
 
