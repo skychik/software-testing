@@ -1,6 +1,8 @@
 package ru.ifmo.cs.software_testing.lab2.math;
 
 import org.junit.jupiter.api.*;
+import ru.ifmo.cs.software_testing.lab2.math.logarithmic.Ln;
+import ru.ifmo.cs.software_testing.lab2.math.logarithmic.LogN;
 
 import java.util.Arrays;
 

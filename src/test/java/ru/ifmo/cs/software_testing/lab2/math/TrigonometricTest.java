@@ -1,5 +1,8 @@
 package ru.ifmo.cs.software_testing.lab2.math;
 
+import ru.ifmo.cs.software_testing.lab2.math.trigonometric.Cosecant;
+import ru.ifmo.cs.software_testing.lab2.math.trigonometric.Sinus;
+import ru.ifmo.cs.software_testing.lab2.math.trigonometric.Tangent;
 import ru.ifmo.cs.software_testing.lab2.utility.FunctionSystem;
 import org.junit.jupiter.api.*;
 

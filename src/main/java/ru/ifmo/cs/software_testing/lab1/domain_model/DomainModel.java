@@ -5,9 +5,9 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class DomainModel {
-	public static int TIME_TO_LIVE = 5000;
-	public static int TIME_TO_REALIZE = 10000;
-	public static int TOTAL_TIME = 12000;
+	static int TIME_TO_LIVE = 5000;
+	static int TIME_TO_REALIZE = 10000;
+	static int TOTAL_TIME = 12000;
 	private final static String FACT = "I am whale";
 	private static Whale whale;
 
